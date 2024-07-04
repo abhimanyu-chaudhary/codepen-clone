@@ -43,7 +43,7 @@ function FrontPage() {
       </div>
       <div className="h-[50vh] w-[100vw]">
         <iframe
-          className="h-full w-full"
+          className="h-full w-full bg-zinc-500"
           sandbox="allow-scripts"
           title="output"
           frameBorder="0"

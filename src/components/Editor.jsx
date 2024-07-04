@@ -19,12 +19,12 @@ function Editor(props) {
 
   return (
     
-      <div className="w-[33vw] flex flex-col mx-auto rounded">
+      <div className="w-[32vw] flex flex-col mx-auto rounded">
         <div className="flex justify-between px-3 bg-slate-950 text-white rounded-tl-lg rounded-tr-lg">
           {displayName}
           <button type="button">X</button>
         </div>
-        <div className="flex-1 ">
+        <div className="flex-1">
             <EditorController
               className="overflow-hidden rounded-bl-md rounded-br-md flex-grow"
               onBeforeChange={handleChange}
