@@ -15,6 +15,8 @@ function Editor(props) {
     onChange(value);
   }
 
+  
+
   return (
     
       <div className="w-[33vw] flex flex-col mx-auto rounded">
