@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 import "codemirror/lib/codemirror.css";
 import "codemirror/theme/material.css";
@@ -15,14 +15,14 @@ function Editor(props) {
     onChange(value);
   }
 
-  
+  const [open, setOpen] = useState(true);
 
   return (
     
-      <div className="w-[32vw] flex flex-col mx-auto rounded">
+      <div className={`min-w-[10vw] flex flex-col mx-auto rounded flex-grow ${open ? '' : 'flex-grow-0'}`}>
         <div className="flex justify-between px-3 bg-slate-950 text-white rounded-tl-lg rounded-tr-lg">
           {displayName}
-          <button type="button">X</button>
+          <button onClick={() => setOpen(prev => !prev)} type="button" className="bg-slate-50 text-black">X</button>
         </div>
         <div className="flex-1">
             <EditorController
