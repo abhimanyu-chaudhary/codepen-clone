@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 
-const PREFIX = "codePen-Live Coding Platform";
+const PREFIX = "codePen-Live";
 
-function LocalStorage(key, initialValue) {
+function useLocalStorage(key, initialValue) {
 
   const prefixedKey = PREFIX + key;
 
@@ -12,7 +12,7 @@ function LocalStorage(key, initialValue) {
     if(jsonValue != null) return JSON.parse(jsonValue)
 
     if(typeof initialValue === "function"){
-        return initialValue();
+        return initialValue;
     }else{
         return initialValue;
     }
@@ -25,4 +25,4 @@ function LocalStorage(key, initialValue) {
   return [value, setValue];
 }
 
-export default LocalStorage;
+export default useLocalStorage;
