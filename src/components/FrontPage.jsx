@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react'
 import Editor from './Editor';
+import useLocalStorage from '../hooks/LocalStorage';
 
 function FrontPage() {
-  const [html, setHtml] = useState("");
-  const [css, setCss] = useState("");
-  const [js, setJs] = useState("");
+  const [html, setHtml] = useLocalStorage("html", "");
+  const [css, setCss] = useLocalStorage("css", "");
+  const [js, setJs] = useLocalStorage("js", "");
   const [srcDoc, setSrcDoc] = useState("");
 
   useEffect(() => {
@@ -41,9 +42,9 @@ function FrontPage() {
           onChange={setJs}
         />
       </div>
-      <div className="h-[50vh] w-[100vw]">
+      <div className="h-[50vh]">
         <iframe
-          className="h-full w-full bg-zinc-500"
+          className="h-full w-full bg-zinc-400 text-white"
           sandbox="allow-scripts"
           title="output"
           frameBorder="0"
