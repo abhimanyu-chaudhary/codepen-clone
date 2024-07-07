@@ -22,7 +22,7 @@ function FrontPage() {
 
   return (
     <div className='w-full h-full'>
-      <div className="h-[52vh] flex bg-zinc-500 py-2">
+      <div className="h-[52vh] flex bg-zinc-400 py-2">
         <Editor
           language="xml"
           displayName="HTML"
